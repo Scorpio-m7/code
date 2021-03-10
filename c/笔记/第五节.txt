@@ -1,0 +1,99 @@
+/*#include<iostream>
+using namespace std;
+void main()
+{
+	int a,b,*p1,*p2,*p;
+	cin>>a>>b;
+	p1=&a;
+	p2=&b;
+	if(a<b)
+	{
+		p=p1;
+		p1=p2;
+		p2=p;
+	}
+	cout<<"a="<<a<<",b="<<b<<endl;
+	cout<<"Max="<<*p1<<",Min="<<*p2<<endl;
+}*/
+
+
+/*#include<iostream>
+using namespace std;
+void main()
+{
+	int a[5],k;
+	for(k=0;k<5;k++)
+		cin>>a[k];
+	for(k=0;k<5;k++)
+		cout<<*(a+k)<<endl;
+}*/
+
+/*#include<iostream>
+using namespace std;;
+void main()
+{
+	int a[5];
+	int *p,k;
+	for(k=0;k<5;k++)
+		cin>>a[k];
+	for(p=a;p<(a+5);p++)
+		cout<<*p<<endl;
+}*/
+
+/*#include<iostream>
+using namespace std;
+void main()
+{
+	int i,a[5];
+	int *p[5];
+	for(i=0;i<5;i++)
+	{
+		cin>>a[i];
+		p[i]=&a[i];
+	}
+	for(i=0;i<5;i++)
+		cout<<**(p+i)<<endl;
+}*/
+
+/*#include<iostream>
+using namespace std;
+void main()
+{
+	char string[]="how are you";
+	cout<<string<<endl;
+}*/
+
+/*#include<iostream>
+using namespace std;
+void main()
+{
+	char *string="how are you";
+	cout<<string<<endl;
+}*/
+
+/*#include<iostream>
+using namespace std;
+void main()
+{
+	char *ps="This is a picture";
+	int n=10;
+	ps=ps+n;
+	cout<<ps<<endl;
+}*/
+
+/*#include<iostream>
+using namespace std;
+const int N=100;
+void main()
+{
+	char a[N],b[N],*p1,*p2;
+	cout<<"input string a:"<<endl;
+	gets(a);
+	p1=a;
+	p2=b;
+	for(;*p1!='\0';p1++,p2++)
+		*p2=*p1;
+		*p2='\0';
+	cout<<"output string b;"<<endl;
+	puts(b);
+}*/

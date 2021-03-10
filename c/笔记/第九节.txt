@@ -1,0 +1,517 @@
+/*#include<iostream>
+using namespace std;
+class Student
+{
+public:
+    void get_value()
+    {
+        cin>>num>>name>>sex;
+    }
+    void display()
+    {
+        cout<<"num:"<<num<<endl;
+        cout<<"name:"<<name<<endl;
+        cout<<"sex:"<<endl;
+    }
+private:
+    int num;
+    char name[10];
+    char sex;
+};
+class Student1:public Student
+{
+public:
+    void get_value_1()
+    {
+        get_value();
+        cin>>age>>addr;
+    }
+    void display_1()
+    {
+        cout<<"num:"<<num<<endl;
+        cout<<"name:"<<name<<endl;
+        cout<<"sex:"<<sex<<endl;
+        cout<<"age:"<<age<<endl;
+        cout<<"address:"<<addr<<endl;
+    }
+private:
+    int age;
+    char addr[30];
+};
+void main()
+{
+    Student1 stud1;
+    stud1.get_value_1();
+    stud1.display();
+    stud1.display1();
+}*/
+
+
+/*#include<iostream>
+using namespace std;
+class Student
+{
+public:
+    void get_value()
+    {
+		cout<<"请输入学生的基本信息（学号，姓名，性别，年龄，地址）"<<endl;
+        cin>>num>>name;
+		cin>>sex;
+    }
+    void display()
+    {
+        cout<<"num:"<<num<<endl;
+        cout<<"name:"<<name<<endl;
+        cout<<"sex:"<<sex<<endl;
+    }
+private:
+    int num;
+    char name[10];
+    char sex;
+};
+class Student1:public Student
+{
+public:
+    void get_value_1()
+    {
+        get_value();
+        cin>>age>>addr;
+    }
+    void display_1()
+    {
+        display();
+        cout<<"age:"<<age<<endl;
+        cout<<"address:"<<addr<<endl;
+    }
+private:
+    int age;
+    char addr[30];
+};
+void main()
+{
+    Student1 stud1;
+    stud1.get_value_1();
+    //stud1.display();
+    stud1.display_1();
+}*/
+
+
+
+/*#include<iostream>
+#include<string>
+using namespace std;
+class Student
+{
+public:
+    Student(int n,string nam,char s)
+    {
+         num=n;
+         name=nam;
+         sex=s;
+         cout<<"调用基类构造函数"<<endl;
+    }
+    ~Student()
+    {
+        cout<<"调用基类构造函数"<<endl;
+    }
+protected:
+    int num;
+    string name;
+    char sex;
+};
+class Student1:public Student
+{
+public:
+    Student1(int n,string nam,char s,int a,char ad[]):Student(n,nam,s)
+    {
+        age=a;
+        addr=ad;
+        cout<<"调用派生类构造函数"<<endl;
+    }
+    void show()
+    {
+        cout<<"num:"<<num<<endl;
+        cout<<"name:"<<name<<endl;
+        cout<<"sex:"<<sex<<endl;
+        cout<<"age:"<<age<<endl;
+        cout<<"address"<<addr<<endl<<endl<<endl;
+    }
+    ~Student1()
+    {
+         cout<<"调用派生类析构函数"<<endl;
+    }
+private:
+    int age;
+    string addr;
+};
+void main()
+{
+    Student1 stud1(1001,"张三",'F',19,"大学东路101号");
+    Student1 stud2(1002,"李四",'T',20,"新华大街102号");
+    stud1.show();
+    stud1.show();
+}*/
+
+
+
+/*#include<iostream>
+#include<string>
+using namespace std;
+class Teacher
+{
+public:
+    Teacher(string nam,int a,string t)
+    {
+        name=nam;
+        age=a;
+        title=t;
+    }
+    void display()
+    {
+         cout<<"name:"<<name<<endl;
+         cout<<"age:"<<age<<endl;
+         cout<<"title:"<<title<<endl;
+    }
+protected:
+    string name;
+    int age;
+    string title;
+};
+class Student
+{
+public:
+     Student(string nam,char s,float sco)
+     {
+         name1=nam;
+         sex=s;
+         score=sco;
+     }
+    void display1()
+    {
+         cout<<"name:"<<name1<<endl;
+         cout<<"sex:"<<sex<<endl;
+         cout<<"score:"<<score<<endl;
+    }
+protected:
+    string name1;
+    char sex;
+    float score;
+};
+class Graduate:public Teacher,public Student
+{
+public:
+    Graduate(string nam,int a,char s,string t,float sco,float w):Teacher(nam,a,t),Student(nam,s,sco)
+    {
+        wage=w;
+    }
+    void show()
+    {
+        cout<<"name:"<<name<<endl;
+		//cout<<"name:"<<Teacher::name<<endl;
+        cout<<"age:"<<age<<endl;
+        cout<<"sex:"<<sex<<endl;
+        cout<<"score:"<<score<<endl;
+        cout<<"title:"<<title<<endl;
+		cout<<"wages:"<<wage<<endl;
+    }
+private:
+    float wage;
+};
+void main()
+{
+    Graduate grad1("张三",19,'F',"assistant",66.5,2000.5);
+    grad1.show();
+}*/
+
+/*#include<iostream>
+#include<string>
+using namespace std;
+class Person
+{
+public:
+    Person(string nam,char s,int a)
+    {
+         name=nam;
+         sex=s;
+         age=a;
+    }
+protected:
+    string name;
+    char sex;
+    int age;
+};
+class Teacher:virtual public Person
+{
+public:
+     Teacher(string nam,char s,int a,string t):Person(nam,s,a)
+     {
+          title=t;
+     }
+protected:
+     string title;
+};
+class Student:virtual public Person
+{
+public:
+    Student(string nam,char s,int a,float sco):Person(nam,s,a)
+    {
+        score=sco;
+    }
+protected:
+    float score;
+};
+class Graduate:public Teacher,public Student
+{
+public:
+    Graduate(string nam,char s,int a,string t,float sco,float w):Person(nam,s,a),Teacher(nam,s,a,t),Student(nam,s,a,sco)
+    {
+        wage=w;
+    }
+    void show()
+    {
+         cout<<"name:"<<name<<endl;
+         cout<<"age:"<<age<<endl;
+         cout<<"sex:"<<sex<<endl;
+         cout<<"score:"<<score<<endl;
+         cout<<"title:"<<title<<endl;
+         cout<<"wages:"<<wage<<endl;
+    }
+private: 
+    float wage;
+};
+void main()
+{
+    Graduate grad1("张三",'F',19,"大学路",66.5,5554.5);
+    grad1.show();
+}*/
+
+
+/*#include<iostream>
+using namespace std;
+class person
+{
+public:
+	void getdata()
+	{
+		cout<<"编号：";
+		cin>>no;
+		cout<<"姓名：";
+		cin>>name;
+	}
+	void dispdata()
+	{
+		cout<<"编号："<<no<<endl;
+		cout<<"姓名："<<name<<endl;
+	}
+protected:
+	int no;
+	char name[8];
+};
+class teacher:public person
+{
+public:
+	void getdata()
+	{
+		cout<<"输入一个教师数据："<<endl;
+		person::getdata();
+		cout<<"职称：";
+		cin>>prof;
+		cout<<"教研室：";
+		cin>>depart;
+	}
+	void dispdata()
+	{
+		cout<<"输出一个教师数据："<<endl;
+		person::dispdata();
+		cout<<"职称："<<prof<<endl;
+		cout<<"教研室："<<depart<<endl;
+	}
+protected:
+	char prof[10];
+	char depart[10];
+};
+class student:public person
+{
+public:
+	void getdata()
+	{
+		person::getdata();
+		cout<<"性别：";
+		cin>>sex;
+		cout<<"班号：";
+		cin>>cname;
+	}
+	void dispdata()
+	{
+		person::dispdata();
+		cout<<"性别："<<sex<<endl;
+		cout<<"班号："<<cname<<endl;
+	}
+protected:
+	char sex[4];
+	char cname[10];
+};
+class unstudent:public student
+{
+public:
+	void getdata()
+	{
+		cout<<"输入一个大学生数据："<<endl;
+		student::getdata();
+		cout<<"英语：";
+		cin>>degree1;
+		cout<<"高等数据：";
+		cin>>degree2;
+		cout<<"数据结构：";
+		cin>>degree3;
+	}
+	void dispdata()
+	{
+		cout<<"输出一个大学生数据"<<endl;
+		student::dispdata();
+        cout<<"英语："<<degree1<<endl;
+		cout<<"高等数学："<<degree2<<endl;
+		cout<<"数据结构："<<degree3<<endl;
+		cout<<"平均分："<<(degree1+degree2+degree3)/3<<endl;
+	}
+private:
+	int degree1;
+	int degree2;
+	int degree3;
+};
+class mistudent:public student
+{
+public:
+	void getdata()
+	{
+		cout<<"输入一个中学生数据："<<endl;
+		student::getdata();
+		cout<<"英语：";
+		cin>>degree1;
+		cout<<"数学：";
+		cin>>degree2;
+		cout<<"语文：";
+		cin>>degree3;
+	}
+	void dispdata()
+	{
+		cout<<"输出一个中学生数据："<<endl;
+		student::dispdata();
+		cout<<"英语："<<degree1<<endl;
+		cout<<"数学："<<degree2<<endl;
+		cout<<"语文："<<degree3<<endl;
+		cout<<"平均分："<<(degree1+degree2+degree3)/3<<endl;
+	}
+private:
+	int degree1;
+	int degree2;
+	int degree3;
+};
+void main()
+{
+	teacher t;
+	t.getdata();
+	unstudent s1;
+	s1.getdata();
+	mistudent s2;
+	s2.getdata();
+	t.dispdata();
+	s1.dispdata();
+	s2.dispdata();
+}*/
+
+
+/*#include<iostream>
+using namespace std;
+class vehicle
+{
+public:
+	vehicle(int whels,float wht);
+	int getwheels();
+	float getweight();
+	void print();
+protected:
+	int wheels;
+	float weight;
+
+};
+class car:private vehicle
+{
+public:
+	car(int whels,float wht,int passengers):vehicle(whels,wht)
+	{
+		passengerload=passengers;
+	}
+	int getpassengers();
+	void print();
+private:
+	int passengerload;
+};
+class truck:private vehicle
+{
+public:
+	truck(int whels,float wht,int passengers,float maxlod):vehicle(whels,wht)
+	{
+		passengerload=passengers;
+		payload=maxlod;
+	}
+	int getpassengers();
+	float efficiency();
+	void print();
+private:
+	int passengerload;
+	float payload;
+};
+vehicle::vehicle(int whels,float wht)
+{
+	wheels=whels;
+	weight=wht;
+}
+int vehicle::getwheels()
+{
+	return wheels;
+}
+float vehicle::getweight()
+{
+	return weight;
+}
+void vehicle::print()
+{
+	cout<<"车轮："<<wheels<<"个"<<endl;
+	cout<<"重量："<<weight<<"公斤"<<endl;
+}
+int car::getpassengers()
+{
+	return passengerload;
+}
+void car::print()
+{
+	cout<<"轿车："<<endl;
+	vehicle::print();
+	cout<<"载人："<<passengerload<<"人"<<endl;
+	cout<<endl;
+}
+int truck::getpassengers()
+{
+	return passengerload;
+}
+float truck::efficiency()
+{
+	return payload/(payload+weight);
+}
+void truck::print()
+{
+	cout<<"卡车："<<endl;
+	vehicle::print();
+	cout<<"载人："<<passengerload<<"人"<<endl;
+	cout<<"效率："<<efficiency()<<endl;
+	cout<<endl;
+}
+void main()
+{
+	car car1(4,1000,5);
+	truck tru1(10,5000,3,3400);
+	car1.print();
+	tru1.print();
+}*/
+

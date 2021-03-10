@@ -1,0 +1,116 @@
+#include<iostream>
+#inlcude<cmath>
+using namespace std;
+class SavingsAccount
+{
+private:
+    int id;
+    double balance;
+    double rate;
+    int lastDate;
+    double accumulation;
+    void record(int date,double amount);
+    double accumulate(int date) const
+    {
+         return accumulation+blance*(date-lastDate);
+    }
+public:
+    SavingsAccount(int date,int id,double rate);
+    int getId()
+    {
+           return id;
+    }
+    double getBalance()
+    {
+          return balance;
+    }
+    double getRate()
+    {
+         return rate;
+    }
+    void deposit(int date,double amount);
+    void withdraw(int date,double amount);
+    void settle(int date);
+    void show();
+};
+SavingsAccount::SavingsAccount(int date,int id,double rate)
+:id(id),balance(0),rate(rate),lastDate(date),accumulation(0)
+{
+     cout<<date<<"\t#"<<id<<"is created"<<endl;  
+}
+void SavingsAccount::recore(int date,double amount)
+{
+    accumulation=accumulate(date);
+    lastDate=date;
+    amount=floor(amount*100+0.5)/100;
+    balance+=amount;
+    cout<<date<<"\t#"<<id<<"\t"<<amount<<"\t"<<bakabce<<endl;
+}
+void SavingsAccount::deposit(int date,double amount)
+{
+     record(date,amount);
+}
+void SavingsAccount::withdraw(int date,double amount)
+{
+    if(amount>getBalance())
+        cout<"Eoor:not enough money"<<endl;
+    else
+       record(date,-amount);
+}
+void SavingsAccounnt::show()
+{
+     cout<<"#"<<id<<"\tBalance:"<<balance;
+}
+void main()
+{
+    SavingsAccount sa0(1,21325302,0.015);
+    SavingsAccount sa1(1,24234234,0.015);
+    sa0.deposit(5,5000);
+    sa1.deposit(25,10000);
+    sa0.deposit(45,5500);
+    sa1.withdraw(60,4000);
+    sa0.settle(90);
+    sa1.settle(90);
+    sa0.show();
+    cout<<endl;
+    sa1.show();
+    cout<<endl;
+}
+
+#include<iostream>
+using namespace std;
+class Circle
+{
+public:
+    Circle(double r)
+    {
+         radius=r;
+    }
+    void setradius(double r)
+    {
+        radius=r;
+    }
+    double getradius()
+    {
+         return radius;
+    }
+    double area()
+    {
+         return 3.1415*radius*radius;
+    }
+    ~Circle()
+    {
+          cout<<"我是析构函数"<<endl;
+    }
+private:
+    double radius;
+};
+void main()
+{
+    Circle circlel(1.2);
+    cout<<"Circle1的半径："<<circle1.getradirs()<<endl();
+    cout<<"Circle1的面积："<<circle1.area()<<endl();
+    circle1.setradius(2.4);
+    cout<<"新circle1的半径："<<circle1.getradius()<<endl;
+    cout<<"新circle1的面积："<<circle1.area()<<endl;
+}

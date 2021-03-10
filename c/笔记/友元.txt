@@ -1,0 +1,86 @@
+#include<iostream>
+using namespace std;
+class Time
+{
+public:
+    Time(int,int,int);
+    friend void display(Time &);
+private:
+    int hour;
+    int minute;
+    int sec;
+};
+Time::Time(int h,int m,int s)
+{
+    hour=h;
+    minute=m;
+    sec=s;
+}
+void display(Time &t)
+{
+    cout<<t.hour<<":"<<t.minute<<":"<<t.sec<<endl;
+}
+void main()
+{
+    Time t1(11,23,45);
+    display(t1);
+}
+
+
+#include<iostream>
+using namespace std;
+class A
+{
+public:
+    A(int,int);
+    void p1();
+    friend void p2(A &s);
+private:
+    int x,y;
+};
+A::A(int n1,int n2)
+{
+    x=n1;
+    y=n2;
+}
+void A::p1()
+{
+    cout<<x<<endl;
+}
+void p2(A &t)
+{
+    cout<<t.x<<endl;
+}
+void main()
+{
+    A ob(2,3);
+    p2(ob);
+}
+
+#include<iostream>
+using namespace std;
+class A
+{
+public:
+    int x,y;
+    A(int n1,int n2);
+    ~A()
+   {
+        cout<<"½áÊø£¡"<<endl;
+   }
+   int add()
+   {
+        return x+y;
+   }
+};
+A::A(int n1,int n2)
+{
+    x=n1;
+    y=n2;
+    cout<<"¿ªÊ¼"<<endl;
+}
+void main()
+{
+    A ob(1,2)
+    cout<<ob.add()<<endl;
+}

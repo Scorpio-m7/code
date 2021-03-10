@@ -1,0 +1,99 @@
+/*#include<iostream>
+using namespace std;
+class Student
+{
+public:
+	int x,y;
+	void p1()
+	{
+		cout<<"hello1"<<endl;
+	}
+	void p2();
+}stu1,stu2;
+void Student::p2()
+{
+	cout<<"ÎûÎû"<<endl;
+}
+Student ob;
+void main()
+{
+	 ob.p1();
+	 ob.p2();
+	 stu1.p1();
+	 stu2.p2();
+	 ob.y=34;
+	 cout<<ob.x+ob.y<<endl;
+}*/
+
+/*#include<iostream>
+using namespace std;
+class Time
+{
+private:
+	int hour;
+	int minute;
+	int sec;
+public:
+	Time()
+	{
+       hour=0;
+	   minute=0;
+	   sec=0;
+	}
+	void set_time();
+	void show_time();
+};
+void Time::set_time()
+{
+	cin>>hour;
+	cin>>minute;
+	cin>>sec;
+}
+void Time::show_time()
+{
+	cout<<hour<<":"<<minute<<":"<<sec<<endl;
+}
+void main()
+{
+	Time t1;
+	t1.set_time();
+	t1.show_time();
+	Time t2;
+	t2.set_time();
+	t2.show_time();
+}*/
+
+/*#include<iostream>
+using namespace std;
+class Box
+{
+public:
+	Box(int,int,int);
+	int volume();
+private:
+	int height;
+	int width;
+	int length;
+};
+Box::Box(int h,int w,int len)
+{
+	height=h;
+	width=w;
+	length=len;
+}
+int Box::volume()
+{
+	return height*width*length;
+}
+void main()
+{
+	Box box1(12,25,30);
+	cout<<"The volume of box1 is"<<box1.volume()<<endl;
+	Box box2(15,30,21);
+	cout<<"The volume of box2 is"<<box2.volume()<<endl;
+}*/
+
+
+
+
+

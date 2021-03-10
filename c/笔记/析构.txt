@@ -1,0 +1,136 @@
+#include<string>
+#include<iostream>
+using namespace std;
+class Student
+{
+public:
+    Student(int n,string nam,char s)
+    {
+        num=n;
+        name=nam;
+        sex=s;
+        cout<<"我是构造函数"<<endl;
+    }
+    ~Student()
+    {
+        cout<<"我是析构函数"<<endl;
+    }
+    void display()
+    {
+        cout<<"num:"<<num<<endl;
+        cout<<"name:"<<name<<endl;
+        cout<<"sex:"<<sex<<endl;
+    }
+private:
+    int num;
+    char name[10];
+    char sex;
+};
+void main()
+{
+    Student stud1(10010,"Xiao_wang",'f');
+    stud1.display();
+}
+
+#include<iostream>
+using namespace std;
+class Time
+{
+public:
+    Time(int,int,int);
+    void display(Date &);
+private:
+    int hour;
+    int minute;
+    int sec;
+};
+class Date
+{
+public:
+    Date(int,int,int);
+    friend void Time::display(Date &);
+private:
+    int month;
+    int day;
+    int year;
+};
+Time::Time(int h,int m,int s)
+{
+    hour=h;
+    minute=m;
+    sec=s;
+}
+void Time::display(Date &da)
+{
+    cout<<da.month<<"/"<<da.day<<"/"<<da.year<<endl;
+    cout<<hour<<":"<<minute<<":"<<sec<<endl;
+}
+Date::Date(int m,int d,int y)
+{
+    month=m;
+    day=d;
+    year=y;
+}
+void main()
+{
+    Time t1(11,12,13);
+    Date d1(5,10,2009);
+    t1.display(d1);
+
+}
+
+#include<iostream>
+using namespace std
+class student
+{
+public:
+    void getdata()
+    {
+         cout<<"输入一个大学生数据："<<endl;
+         cout<<"学号：";
+         cin>>no;
+         cout<<"姓名：";
+         cin>>name;
+         cout<<"性别：";
+         cin>>sex;
+         cout<<"班号：";
+         cin>>cname;
+         cout<<"英语：";
+         cin>>degree1;
+         cout<<"高等数学：";
+         cin>>degree2;
+         cout<<"数据结构：";
+         cin>>degree3;
+    }
+    void dispdata()
+    {
+         cout<<"学号："<<no<<endl;
+         cout<<"姓名："<<name<<endl;
+         cout<<"性别："<<sex<<endl;
+         cout<<"班号："<<cname<<endl;
+         cout<<"英语："<<degree1<<endl;
+         cout<<"高等数学："<<degree2<<endl;
+         cout<<"数据结构："<<degree3<<endl;
+         cout<<"平均分："<<(degree1+degree2+degree3)/3<<endl;
+    }
+private:
+    int no;
+    char name[8];
+    char sex[4];
+    char cname[10];
+    int degree1;
+    int degree2;
+    int degree3;
+};
+void main()
+{
+    student s1;
+    s1.getdata();
+    s1.dispdata();
+}
+
+#include<iostream>
+using namespace std;
+class Circle
+{
+};

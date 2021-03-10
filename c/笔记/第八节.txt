@@ -1,0 +1,350 @@
+/*#include<iostream>
+using namespace std;
+class A
+{
+public:
+    int x,y;
+    A(int n1,int n2);
+    ~A()
+   {
+        cout<<"结束！"<<endl;
+   }
+   int add()
+   {
+        return x+y;
+   }
+};
+A::A(int n1,int n2)
+{
+    x=n1;
+    y=n2;
+    cout<<"开始"<<endl;
+}
+void main()
+{
+    A ob(1,2);
+    cout<<ob.add()<<endl;
+}*/
+
+/*#include<string>
+#include<iostream>
+using namespace std;
+class Student
+{
+public:
+    Student(int n,string nam,char s)
+    {
+        num=n;
+        name=nam;
+        sex=s;
+        cout<<"我是构造函数"<<endl;
+    }
+    ~Student()
+    {
+        cout<<"我是析构函数"<<endl;
+    }
+    void display()
+    {
+        cout<<"num:"<<num<<endl;
+        cout<<"name:"<<name<<endl;
+        cout<<"sex:"<<sex<<endl;
+    }
+private:
+    int num;
+    string name;
+    char sex;
+};
+void main()
+{
+    Student stud1(10010,"Xiao_wang",'f');
+    stud1.display();
+}*/
+
+
+/*#include<iostream>
+using namespace std;
+class A
+{
+public:
+	A(int,int);
+	void printer();
+	//friend void p2(A &s);
+	void p2(A &s);
+private:
+	int x,y;
+};
+A::A(int n1,int n2)
+{
+	x=n1;
+	y=n2;
+}
+void A::printer()
+{
+	cout<<x<<endl;
+	cout<<y<<endl;
+}
+void p2(A &t)
+{
+	cout<<t.x<<endl;
+	cout<<t.y<<endl;
+}
+void main()
+{
+	A ob(2,3);
+	p2(ob);
+}*/
+
+/*#include<iostream>
+using namespace std;
+class Date;
+class Time
+{
+public:
+    Time(int,int,int);
+    void display(Date &);
+private:
+    int hour;
+    int minute;
+    int sec;
+};
+class Date
+{
+public:
+    Date(int,int,int);
+    friend void Time::display(Date &);
+private:
+    int month;
+    int day;
+    int year;
+};
+Time::Time(int h,int m,int s)
+{
+    hour=h;
+    minute=m;
+    sec=s;
+}
+void Time::display(Date &da)
+{
+    cout<<da.month<<"/"<<da.day<<"/"<<da.year<<endl;
+    cout<<hour<<":"<<minute<<":"<<sec<<endl;
+}
+Date::Date(int m,int d,int y)
+{
+    month=m;
+    day=d;
+    year=y;
+}
+void main()
+{
+    Time t1(11,12,13);
+    Date d1(5,10,2009);
+    t1.display(d1);
+
+}*/
+
+/*#include<iostream>
+using namespace std;
+class student
+{
+public:
+    void getdata()
+    {
+         cout<<"输入一个大学生数据："<<endl;
+         cout<<"学号：";
+         cin>>no;
+         cout<<"姓名：";
+         cin>>name;
+         cout<<"性别：";
+         cin>>sex;
+         cout<<"班号：";
+         cin>>cname;
+         cout<<"英语：";
+         cin>>degree1;
+         cout<<"高等数学：";
+         cin>>degree2;
+         cout<<"数据结构：";
+         cin>>degree3;
+    }
+    void dispdata()
+    {
+         cout<<"学号："<<no<<endl;
+         cout<<"姓名："<<name<<endl;
+         cout<<"性别："<<sex<<endl;
+         cout<<"班号："<<cname<<endl;
+         cout<<"英语："<<degree1<<endl;
+         cout<<"高等数学："<<degree2<<endl;
+         cout<<"数据结构："<<degree3<<endl;
+         cout<<"平均分："<<(degree1+degree2+degree3)/3<<endl;
+    }
+private:
+    int no;
+    char name[8];
+    char sex[4];
+    char cname[10];
+    int degree1;
+    int degree2;
+    int degree3;
+};
+void main()
+{
+    student s1;
+    s1.getdata();
+    s1.dispdata();
+}*/
+
+
+/*#include<iostream>
+using namespace std;
+class Circle
+{
+public:
+	Circle(double r)
+	{
+		radius=r;
+	}
+	void setradius(double r)
+	{
+		radius=r;
+	}
+	double getradius()
+	{
+		return radius;
+	}
+	double area()
+	{
+		return 3.14*radius*radius;
+	}
+	~Circle()
+	{
+		cout<<"我是析构函数"<<endl;
+	}
+private:
+	double radius;
+};
+void main()
+{
+	Circle circle1(1.2);
+	cout<<"circle1的半径："<<circle1.getradius()<<endl;
+	cout<<"circle1的面积："<<circle1.area()<<endl;
+	circle1.setradius(2.4);
+	cout<<"新circle1的半径："<<circle1.getradius()<<endl;
+	cout<<"新circle1的面积："<<circle1.area()<<endl;
+}*/
+
+/*#include<iostream>
+using namespace std;
+class Rectangle
+{
+public:
+	Rectangle()
+	{
+		x=1;
+		y=1;
+	}
+	Rectangle(float a,float b)
+	{
+		x=a;
+		y=b;
+	}
+	void setside(float a,float b);
+	float perimeter();
+	float area();
+	~Rectangle()
+	{
+		cout<<"我是析构函数"<<endl;
+	}
+private:
+	float x;
+	float y;
+};
+void Rectangle::setside(float a,float b)
+{
+	x=a;
+	y=b;
+}
+float Rectangle::perimeter()
+{
+	return 2*(x+y);
+}
+float Rectangle::area()
+{
+	return x*y;
+}
+void main()
+{
+	Rectangle rect1(1.2,1.0);
+	cout<<"rect1的周长"<<rect1.perimeter()<<endl;
+	cout<<"rect1的面积"<<rect1.area()<<endl;
+
+	Rectangle rect2;
+	cout<<"rect2的周长"<<rect2.perimeter()<<endl;
+	cout<<"rect2的面积"<<rect2.area()<<endl;
+
+	rect2.setside(3,3);
+	cout<<"重新设置后rect2的周长"<<rect2.perimeter()<<endl;
+	cout<<"重新设置后rect2的面积"<<rect2.area()<<endl;
+}*/
+
+
+/*#include<iostream>
+using namespace std;
+class Rectangle
+{
+public:
+	Rectangle()
+	{
+		x=1;
+		y=1;
+	}
+	Rectangle(float a,float b)
+	{
+		x=a;
+		y=b;
+	}
+	void setside(float a,float b);
+	friend float perimeter(Rectangle &);
+	friend float area(Rectangle &);
+	~Rectangle()
+	{
+		
+	}
+private:
+	float x;
+	float y;
+};
+void Rectangle::setside(float a,float b)
+{
+	x=a;
+	y=b;
+}
+float perimeter(Rectangle &z)
+{
+	float a;
+	float b;
+	a=z.x;
+	b=z.y;
+	return 2*(a+b);
+}
+float area(Rectangle &z)
+{
+	float a;
+	float b;
+	a=z.x;
+	b=z.y;
+	return a*b;
+}
+void main()
+{
+	Rectangle rect1(1.2,1.0);
+	cout<<"rect1的周长"<<perimeter(rect1)<<endl;
+	cout<<"rect1的面积"<<area(rect1)<<endl;
+
+	Rectangle rect2;
+	cout<<"rect2的周长"<<perimeter(rect2)<<endl;
+	cout<<"rect2的面积"<<area(rect2)<<endl;
+
+	rect2.setside(3,3);
+	cout<<"重新设置后rect2的周长"<<perimeter(rect2)<<endl;
+	cout<<"重新设置后rect2的面积"<<area(rect2)<<endl;
+}*/
+
