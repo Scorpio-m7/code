@@ -1,0 +1,66 @@
+                <div class="ie-fix"><p class="reader-word-layer reader-word-s1-1" style="width: 668px;height: 167px;line-height: 167px;top: 1252px;left: 1320px;z-index: 273;;;;;;false;" >学生姓名<
+<p class="reader-word-layer reader-word-s1-8" style="width: 83px;height: 167px;line-height: 167px;top: 1252px;left: 1987px;z-index: 274;;;;;;font-family: simsun;;" >&ensp;<
+<p class="reader-word-layer reader-word-s1-8" style="width: 251px;height: 167px;line-height: 167px;top: 1252px;left: 2785px;z-index: 275;;;;;;false;" >&ensp;&ensp;&ensp;<
+<p class="reader-word-layer reader-word-s1-2" style="width: 335px;height: 167px;line-height: 167px;top: 1252px;left: 3593px;z-index: 276;;;;;;false;" >学号<
+<p class="reader-word-layer reader-word-s1-8" style="width: 83px;height: 167px;line-height: 167px;top: 1252px;left: 3926px;z-index: 277;;;;;;font-family: simsun;;" >&ensp;<
+<p class="reader-word-layer reader-word-s1-8" style="width: 167px;height: 167px;line-height: 167px;top: 1252px;left: 4784px;z-index: 278;;;;;;false;" >&ensp;&ensp;<
+<p class="reader-word-layer reader-word-s1-2" style="width: 335px;height: 167px;line-height: 167px;top: 1252px;left: 5573px;z-index: 279;;;;;;false;" >专业<
+<p class="reader-word-layer reader-word-s1-8" style="width: 83px;height: 167px;line-height: 167px;top: 1252px;left: 5906px;z-index: 280;;;;;;font-family: simsun;;" >&ensp;<
+<p class="reader-word-layer reader-word-s1-1" style="width: 668px;height: 167px;line-height: 167px;top: 1252px;left: 6895px;z-index: 281;;;;;;false;" >软件工程<
+<
+<p class="reader-word-layer reader-word-s1-1" style="width: 668px;height: 167px;line-height: 167px;top: 1624px;left: 1320px;z-index: 305;;;;;;false;" >题目名称<
+<
+<p class="reader-word-layer reader-word-s1-2" style="width: 335px;height: 167px;line-height: 167px;top: 1568px;left: 2311px;z-index: 307;;;;;;false;" >基于<
+<p class="reader-word-layer reader-word-s1-8 reader-word-s1-10 reader-word-s1-11" style="width: 499px;height: 167px;line-height: 167px;top: 1568px;left: 2688px;z-index: 308;color: #000000;;;;;;false;" >Python<
+<p class="reader-word-layer reader-word-s1-2" style="width: 2333px;height: 167px;line-height: 167px;top: 1568px;left: 3229px;z-index: 309;letter-spacing: -0.9299999999999999px;;;;;;false;" >的飞机大战游戏系统设计与实现<
+<
+<p class="reader-word-layer reader-word-s1-51" style="width: 836px;height: 167px;line-height: 167px;top: 3791px;left: 1236px;z-index: 327;;;;;;false;" >研究或设计<
+<p class="reader-word-layer reader-word-s1-2" style="width: 335px;height: 167px;line-height: 167px;top: 4039px;left: 1486px;z-index: 328;;;;;;false;" >概述<
+<p class="reader-word-layer reader-word-s1-8" style="width: 83px;height: 167px;line-height: 167px;top: 4039px;left: 1819px;z-index: 329;;;;;;font-family: simsun;;" >&ensp;<
+<p class="reader-word-layer reader-word-s1-8" style="width: 83px;height: 167px;line-height: 167px;top: 4287px;left: 1653px;z-index: 330;;;;;;font-family: simsun;;" >&ensp;<
+<
+<p class="reader-word-layer reader-word-s1-8" style="width: 83px;height: 167px;line-height: 167px;top: 1934px;left: 2644px;z-index: 332;;;;;;font-family: simsun;;" >&ensp;<
+<p class="reader-word-layer reader-word-s1-2" style="width: 5552px;height: 167px;line-height: 167px;top: 1934px;left: 2728px;z-index: 333;letter-spacing: 0.59px;;;;;;false;" >在社会经济发展迅速，人们的工作压力越来越来，长时间紧张繁忙的工作压<
+<p class="reader-word-layer reader-word-s1-13" style="width: 5974px;height: 167px;line-height: 167px;top: 2182px;left: 2311px;z-index: 334;;;;;;false;" >力使人们精神紧绷，为了更好的工作并提高工作效率，这时间就需要短暂的休息让<
+<p class="reader-word-layer reader-word-s1-14" style="width: 5972px;height: 167px;line-height: 167px;top: 2429px;left: 2311px;z-index: 335;;;;;;false;" >紧绷的精神放松一下。缓解压力的方式也很多，要选择适合自己的方式，玩游戏也<
+<p class="reader-word-layer reader-word-s1-13" style="width: 5974px;height: 167px;line-height: 167px;top: 2677px;left: 2311px;z-index: 336;;;;;;false;" >是众多缓解压力方式之一。看电影、电视或者音乐也可以缓解压力，但是人们只是<
+<p class="reader-word-layer reader-word-s1-14" style="width: 5972px;height: 167px;line-height: 167px;top: 2925px;left: 2311px;z-index: 337;;;;;;false;" >能被动的观看与倾听，并不能参与其中进行互动。而游戏有着很好交互性，玩家并<
+<p class="reader-word-layer reader-word-s1-14" style="width: 5972px;height: 167px;line-height: 167px;top: 3172px;left: 2311px;z-index: 338;;;;;;false;" >不是仅仅在观看角色在如何移动，而是也要融入角色当中进行操作。在游戏中，玩<
+<p class="reader-word-layer reader-word-s1-2" style="width: 5968px;height: 167px;line-height: 167px;top: 3420px;left: 2311px;z-index: 339;letter-spacing: 2.8100000000000005px;;;;;;false;" >家的行为也会对游戏产生影响。游戏除了让人娱乐之外还可以作为缓解压力的方<
+<p class="reader-word-layer reader-word-s1-15" style="width: 4839px;height: 167px;line-height: 167px;top: 3668px;left: 2311px;z-index: 340;;;;;;false;" >式，在休息的时候可以不用想其他事情，这样压力就会得到缓解。<
+<
+<p class="reader-word-layer reader-word-s1-16" style="width: 5639px;height: 167px;line-height: 167px;top: 3915px;left: 2644px;z-index: 342;;;;;;false;" >个人计算机刚刚开始普及的时候，游戏并不能被广泛接受，最主要的原因就是<
+<p class="reader-word-layer reader-word-s1-2" style="width: 4338px;height: 167px;line-height: 167px;top: 4163px;left: 2311px;z-index: 343;letter-spacing: -0.76px;;;;;;false;" >不能充分发挥个人计算机的性能，游戏程序不能最大化使用<
+<p class="reader-word-layer reader-word-s1-8 reader-word-s1-17" style="width: 165px;height: 167px;line-height: 167px;top: 4163px;left: 6717px;z-index: 344;color: #000000;;;;;;false;" >PC<
+<p class="reader-word-layer reader-word-s1-2 reader-word-s1-19" style="width: 1333px;height: 167px;line-height: 167px;top: 4163px;left: 6952px;z-index: 345;color: #000000;;;;;;false;" >机器的硬件资源，<
+<p class="reader-word-layer reader-word-s1-2" style="width: 2337px;height: 167px;line-height: 167px;top: 4411px;left: 2311px;z-index: 346;letter-spacing: -0.67px;;;;;;false;" >机器与人的交互做的还不够好。<
+<p class="reader-word-layer reader-word-s1-20" style="width: 2835px;height: 167px;line-height: 167px;top: 4411px;left: 4589px;z-index: 347;;;;;;false;" >由此导致个人计算机早起游戏画面差，<
+<p class="reader-word-layer reader-word-s1-22" style="width: 1000px;height: 167px;line-height: 167px;top: 4411px;left: 7367px;z-index: 348;;;;;;false;" >操作感僵硬，<
+<p class="reader-word-layer reader-word-s1-23" style="width: 1002px;height: 167px;line-height: 167px;top: 4659px;left: 2311px;z-index: 349;;;;;;false;" >可玩性不高，<
+<p class="reader-word-layer reader-word-s1-2" style="width: 1667px;height: 167px;line-height: 167px;top: 4659px;left: 3255px;z-index: 350;letter-spacing: -0.96px;;;;;;false;" >所以不被人们所接受。<
+<p class="reader-word-layer reader-word-s1-2" style="width: 2166px;height: 167px;line-height: 167px;top: 4659px;left: 4865px;z-index: 351;letter-spacing: -1.01px;;;;;;false;" >但是随着切硅技术的提升导致<
+<p class="reader-word-layer reader-word-s1-8" style="width: 251px;height: 167px;line-height: 167px;top: 4659px;left: 7074px;z-index: 352;;;;;;false;" >CPU<
+<p class="reader-word-layer reader-word-s1-23" style="width: 1002px;height: 167px;line-height: 167px;top: 4659px;left: 7366px;z-index: 353;;;;;;false;" >性能的飞跃，<
+<p class="reader-word-layer reader-word-s1-2" style="width: 335px;height: 167px;line-height: 167px;top: 4906px;left: 2311px;z-index: 354;;;;;;false;" >以及<
+                ;;;;;false;" >C,C++,Java,Python<
+<p class="reader-word-layer reader-word-s1-27" style="width: 2170px;height: 167px;line-height: 167px;top: 4906px;left: 4145px;z-index: 356;;;;;;false;" >等等一系列高级语言的开发，<
+<p class="reader-word-layer reader-word-s1-2" style="width: 2000px;height: 167px;line-height: 167px;top: 4906px;left: 6285px;z-index: 357;letter-spacing: -0.95px;;;;;;false;" >游戏对硬件资源的利用率提<
+<p class="reader-word-layer reader-word-s1-28" style="width: 3002px;height: 167px;line-height: 167px;top: 5154px;left: 2311px;z-index: 358;;;;;;false;" >高，现在游戏各方面都有了质的飞跃。从<
+<p class="reader-word-layer reader-word-s1-8" style="width: 167px;height: 167px;line-height: 167px;top: 5154px;left: 5382px;z-index: 359;;;;;;false;" >20<
+<p class="reader-word-layer reader-word-s1-28" style="width: 2669px;height: 167px;line-height: 167px;top: 5154px;left: 5616px;z-index: 360;;;;;;false;" >世纪末期暴雪公司下的《星际争霸》<
+<p class="reader-word-layer reader-word-s1-2" style="width: 5973px;height: 167px;line-height: 167px;top: 5402px;left: 2311px;z-index: 361;letter-spacing: -1.6500000000000001px;;;;;;false;" >《魔兽世界》再到现如今的《英雄联盟》《守望先锋》等等都给玩家带来极大的乐<
+<p class="reader-word-layer reader-word-s1-14" style="width: 5972px;height: 167px;line-height: 167px;top: 5649px;left: 2311px;z-index: 362;;;;;;false;" >趣与良好的游戏体验。当然，除了游戏本身的优秀质量外，可以较广泛的支持不同<
+<p class="reader-word-layer reader-word-s1-29" style="width: 3004px;height: 167px;line-height: 167px;top: 5897px;left: 2311px;z-index: 363;;;;;;false;" >硬件设备及操作系统的功能也不容忽视，<
+<p class="reader-word-layer reader-word-s1-28" style="width: 3002px;height: 167px;line-height: 167px;top: 5897px;left: 5283px;z-index: 364;;;;;;false;" >高中低端的个人计算机都有着不错的流畅<
+<p class="reader-word-layer reader-word-s1-2" style="width: 335px;height: 167px;line-height: 167px;top: 6144px;left: 2311px;z-index: 365;;;;;;false;" >度。<
+<p class="reader-word-layer reader-word-s1-8" style="width: 83px;height: 167px;line-height: 167px;top: 6144px;left: 2644px;z-index: 366;;;;;;font-family: simsun;;" >&ensp;<
+<p class="reader-word-layer reader-word-s1-8" style="width: 83px;height: 167px;line-height: 167px;top: 6392px;left: 2311px;z-index: 375;;;;;;font-family: simsun;;" >&ensp;<
+<p class="reader-word-layer reader-word-s1-1" style="width: 668px;height: 167px;line-height: 167px;top: 8010px;left: 1168px;z-index: 376;;;;;;false;" >主要内容<
+<
+<
+<p class="reader-word-layer reader-word-s1-23" style="width: 1002px;height: 167px;line-height: 167px;top: 6895px;left: 2644px;z-index: 379;;;;;;false;" >本软件是基于<
+<p class="reader-word-layer reader-word-s1-3 reader-word-s1-8 reader-word-s1-30" style="width: 583px;height: 167px;line-height: 167px;top: 6895px;left: 3688px;z-index: 380;color: #000000;;;;;;false;" >windows<
+<p class="reader-word-layer reader-word-s1-20" style="width: 2168px;height: 167px;line-height: 167px;top: 6895px;left: 4313px;z-index: 381;;;;;;false;" >系统的开发的一款娱乐软件，<
+<p class="reader-word-layer reader-word-s1-22" style="width: 1832px;height: 167px;line-height: 167px;top: 6895px;left: 6451px;z-index: 382;;;;;;false;" >它包含普通玩家与游客两<
+<p class="reader-word-layer reader-word-s1-2" style="width: 502px;height: 167px;line-height: 167px;top: 7143px;left: 2311px;z-index: 383;;;;;;false;" >种用户<
+<
