@@ -1,0 +1,4 @@
+﻿cl : 命令行 warning D9025: 正在重写“/sdl”(用“/GS-”)
+  ConsoleApplication1.cpp
+D:\CTF\Reverse\vs2019代码\ConsoleApplication1\ConsoleApplication1.cpp(56,20): warning C4018: “<”: 有符号/无符号不匹配
+  ConsoleApplication1.vcxproj -> D:\CTF\Reverse\vs2019代码\Debug\ConsoleApplication1.exe
