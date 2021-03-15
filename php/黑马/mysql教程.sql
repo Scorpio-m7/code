@@ -124,3 +124,6 @@ select @name :=name,@age:=age from class limit 1;#通过查询数据为变量赋
 select name,age from class order by id desc limit 1 into @name,@age;#将class表按id从大到小排序后，取第一行name,age赋给用户变量@name,@age
 #*******************************************************************************************************************************
 select *,if(age>20,'old','young') as judge from class;#年龄大于20为old
+select char_length('长度'),length('长度'),concat('拼','接'),instr('存在','在'),lcase('LOWERcAsE'),left('左侧开始到指定位置',5),ltrim('   ab  c ');#字符数,字节数,拼接,不存在返回0,全部小写,左侧开始截取,消除左侧空格
+select mid('从指定位置开始到结束',6),now(),curdate(),curtime(),datediff('2021-10-1','2018-2-25'),date_add('2021-3-15',interval 1314 minute),unix_timestamp();#从指定位置截取,日期 时间,日期,时间,日期差,时间增加,时间戳
+select from_unixtime(123456789),abs(-1),ceiling(1.1),floor(1.1),pow(2,4),rand(),round(1.5),md5('a'),version(),database();#时间戳变日期,绝对值,向上取整,向下取整,指数,0-1随机数,四舍五入,md5加密,版本号,数据库
