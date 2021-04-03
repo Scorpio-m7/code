@@ -122,21 +122,31 @@ set global auto_increment_increment=1;==set @@global.auto_increment_increment=1;
 set @name='HelloWorld';==set @name :='HelloWorld';#定义用户变量,:=为赋值符号,=为比较符号
 select @name :=name,@age:=age from class limit 1;#通过查询数据为变量赋值,将class表中第一行的name和age赋给用户变量@name,@age
 select name,age from class order by id desc limit 1 into @name,@age;#将class表按id从大到小排序后，取第一行name,age赋给用户变量@name,@age
-#****************************************************2.1流程结构——if分支******************************************************
+#****************************************************if分支******************************************************
 select *,if(age>20,'old','young') as judge from class;#年龄大于20为old
-#****************************************************2.3函数——内置函数********************************************************
+#****************************************************内置函数********************************************************
 select char_length('长度'),length('长度'),concat('拼','接'),instr('存在','在'),lcase('LOWERcAsE'),left('左侧开始到指定位置',5),ltrim('   ab  c ');#字符数,字节数,拼接,不存在返回0,全部小写,左侧开始截取,消除左侧空格
 select mid('从指定位置开始到结束',6),now(),curdate(),curtime(),datediff('2021-10-1','2018-2-25'),date_add('2021-3-15',interval 1314 minute),unix_timestamp();#从指定位置截取,日期 时间,日期,时间,日期差,时间增加,时间戳
 select from_unixtime(123456789),abs(-1),ceiling(1.1),floor(1.1),pow(2,4),rand(),round(1.5),md5('a'),version(),database();#时间戳变日期,绝对值,向上取整,向下取整,指数,0-1随机数,四舍五入,md5加密,版本号,数据库
-#****************************************************3.1函数——自定义函数********************************************************
+#****************************************************自定义函数********************************************************
 delimiter $$#修改语句结束符
-create function my_func1(int_1 int,int_2 int) returns int#创建函数要确定形参类型和返回类型
+create function my_sum(last int) returns int#创建函数要确定形参类型和返回类型
 begin
-	return int_1+int_2;#函数内部select语句只能赋值
+	declare result int default 0;#declare声明局部变量要在其他语句前
+	declare i int default 1;
+	mywhile:while i<=last do#循环
+		if i%5=0 then#去掉5的倍数
+			set i=i+1;#mysql中没有++
+			iterate mywhile;
+		end if;
+		set result=result+i;#修改变量
+		set i=i+1;
+	end while mywhile;
+	return result;#函数内部select语句只能赋值
 end
 $$
 delimiter ;#改回语句结束符
-show function status\G#查看函数
-show create function my_func1;#查看函数创建语句
-select my_func1(10,20);#调用函数,只能调用对应数据库下的函数
-drop function my_func1;#删除自定义函数
+show function status\G#查看所有函数
+show create function my_sum;#查看函数创建语句
+select my_sum(10);#调用函数,只能调用对应数据库下的函数
+drop function my_sum;#在对应数据库下删除自定义函数
