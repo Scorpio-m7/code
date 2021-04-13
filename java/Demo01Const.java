@@ -8,5 +8,11 @@
 6.空常量:null
  */
 public class Demo01Const{
-
+	public static void main(String[] args) {
+		System.out.println("");//字符串常量
+		System.out.println(-3.14);//整数&浮点数常量
+		System.out.println('a');//字符常量有且仅有一个字符
+		System.out.println(ture);//布尔常量
+		
+	}
 }
