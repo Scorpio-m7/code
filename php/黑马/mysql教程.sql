@@ -119,7 +119,7 @@ commit;#提交,在自动事务关闭后同步数据表
 rollback;#回滚,取消操作
 #*******************************************************************************************************************************
 set global auto_increment_increment=1;==set @@global.auto_increment_increment=1;#设置全局自增长步长,重启客户端生效
-set @name='HelloWorld';==set @name :='HelloWorld';#定义用户变量,:=为赋值符号,=为比较符号
+set @name='HelloWorld';==set @name :='HelloWorld';#定义用户变量,此次会话可用,:=为赋值符号,=为比较符号
 select @name :=name,@age:=age from class limit 1;#通过查询数据为变量赋值,将class表中第一行的name和age赋给用户变量@name,@age
 select name,age from class order by id desc limit 1 into @name,@age;#将class表按id从大到小排序后，取第一行name,age赋给用户变量@name,@age
 #****************************************************if分支******************************************************
