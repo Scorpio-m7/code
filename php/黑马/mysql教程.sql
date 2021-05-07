@@ -31,7 +31,6 @@ alter table class modify name varchar(20);#修改字段类型
 alter table class drop id;#删除字段
 #drop table class;#删除表
 #***************************************************数据操作****************************************************
-
 insert into class (age,name) values(30,'jack'),(20,数据操作'anne'),(30,'lucy');#插入数据
 insert into class values(2,25,'perter') on duplicate key update name='perter';#主键id冲突,只更新name
 replace into class values(1,'mark',15);#替换所有数据
