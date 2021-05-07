@@ -28,6 +28,6 @@ public class Demo02Variable {
 		boolean var1 = true;//定义布尔型变量
 		System.out.println(var1); // true
 		boolean var2 = var1;// 将右侧变量var1里面的false值,向左交给var2变量进行存储
-		System.out.println(var2); // false
+		System.out.println(var2); // true
 	}
 }
