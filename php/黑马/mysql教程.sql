@@ -153,8 +153,9 @@ show create function my_sum;#查看函数创建语句
 select my_sum(10);#调用函数,只能调用对应数据库下的函数
 drop function my_sum;#在对应数据库下删除自定义函数
 #****************************************************存储过程*******************************************************
+set @n1=1,@n2=2,@n3=3;#创建会话变量
 delimiter $$--修改语句结束符
-create procedure my_pro1()--过程没有返回值
+create procedure my_pro1(in int_1 int,out int_2 int,inout int_3 int)--过程没有返回值，但可以传入形参
 begin#如果过程体中只有一条指令,可以省略begin和end
 	declare i int default 1;
 	#declare sum int default 0;#局部变量
@@ -164,10 +165,13 @@ begin#如果过程体中只有一条指令,可以省略begin和end
 		set i=i+1;
 	end while;
 	select @sum;#显示结果
+	select int_1,int_2,int_3;#首先设置out类型的变量为null
+	set int_1='91',int_2='92',int_3='93';#修改会话变量
 end
 $$
 delimiter ;#改回语句结束符
 show procedure status\G#查看所有存储过程
 show create procedure my_pro1\G#查看过程创建语句
-call my_pro1();#没有返回值,select不能调用
+call my_pro1(@n1,@n2,@n3);#传入形参,没有返回值,select不能调用
+select @n1,@n2,@n3;#out和inout类型的值会被修改
 drop procedure my_pro1;#在对应数据库下删除存储过程
