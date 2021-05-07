@@ -1,4 +1,4 @@
-#mysql数据库教程：https://www.bilibili.com/video/BV1Vx411g7uJ?p=57
+#mysql数据库教程：https://www.bilibili.com/video/BV1Vx411g7uJ
 #***************************************************数据库操作****************************************************
 create database test charset gbk;#创建数据库
 show databases;#显示所有数据库
