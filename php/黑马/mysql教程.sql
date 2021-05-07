@@ -164,9 +164,10 @@ begin#如果过程体中只有一条指令,可以省略begin和end
 		set i=i+1;
 	end while;
 	select @sum;#显示结果
-	select int_1,int_2,int_3;#首先设置out类型的变量为null
+	select int_1,int_2,int_3;#首先设置out类型参数为null
 	set int_1='91',int_2='92',int_3='93';#修改会话变量
-end
+	#set @n1='a';#可以在存储过程内部修改会话变量
+end#执行end后out和inout的参数会返回,从而覆盖外部变量
 $$
 delimiter ;#改回语句结束符
 show procedure status\G#查看所有存储过程
