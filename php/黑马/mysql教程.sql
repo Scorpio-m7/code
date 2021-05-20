@@ -175,14 +175,14 @@ show create procedure my_pro1\G#查看过程创建语句
 call my_pro1(@n1,@n2,@n3);#传入形参,没有返回值,select不能调用
 select @n1,@n2,@n3;#out和inout类型的值会被修改
 drop procedure my_pro1;#在对应数据库下删除存储过程
-#****************************************************存储过程*******************************************************
+#****************************************************触发器*******************************************************
 create table my_goods(id int primary key auto_increment,name varchar(20),num int)charset utf8;#创建货物表
 create table my_order(id int primary key auto_increment,order_num int)charset utf8;#创建订单表
 insert into my_goods values(null,'iphone',100),(null,'Mac',50),(null,'book',60);#插入数据
 delimiter $$
 create trigger after_insert_order_t after insert on my_order for each row
 begin
-	update my_goods set num=num-new.order_num where id=new.id;#创建一个订单,库存减一
+	update my_goods set num=num-new.order_num where id=new.id;#创建订单后,库存相应减少
 end
 $$
 delimiter ;
