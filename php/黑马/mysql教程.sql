@@ -180,13 +180,19 @@ create table my_goods(id int primary key auto_increment,name varchar(20),num int
 create table my_order(id int primary key auto_increment,order_num int)charset utf8;#创建订单表
 insert into my_goods values(null,'iphone',100),(null,'Mac',50),(null,'book',60);#插入数据
 delimiter $$
-create trigger after_insert_order_t after insert on my_order for each row
+create trigger before_insert_order_t before insert on my_order for each row#创建触发器,在插入my_order表前触发
 begin
-	update my_goods set num=num-new.order_num where id=new.id;#创建订单后,库存相应减少
+	select num from my_goods where id=new.id into @num;#取出目前库存数量给@num
+	if @num>new.order_num then
+		update my_goods set num=num-new.order_num where id=new.id;#创建订单后,库存相应减少
+	else#如果库存不足无法创建
+		insert into xxx values('xxx');#强制报错,清空触发器操作
+	end if;
 end
 $$
 delimiter ;
 show triggers\G#查看触发器
 show create trigger after_insert_order_t\G#查看触发器创建语句
-insert into my_order values(2,10);#10个Mac订单,goods中的Mac减10
-drop trigger after_insert_order_t;#删除触发器
+insert into my_order values(2,10);#10个Mac订单,my_goods中的Mac减10
+insert into my_order values(3,90);#库存不足无法创建订单
+drop trigger before_insert_order_t;#删除触发器
