@@ -8,7 +8,6 @@
 强制类型转换（显式）
 	1. 特点：代码需要进行特殊的格式处理，不能自动完成。
 	2. 格式：范围小的类型 范围小的变量名 = (范围小的类型) 原本范围大的数据;
-
 */
 public class Demo01DataType {
 	public static void main(String[] args) {
