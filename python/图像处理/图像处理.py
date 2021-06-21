@@ -16,3 +16,11 @@ img4.show()
 img3_crop=img3.crop((50,50,200,200))#剪切矩形区域
 img4.paste(img3_crop,(30,30))#粘贴到指定位置
 img4.show()
+#=======================================================================================
+img1.rotate(30).show()#旋转图像
+img1.transpose(Image.FLIP_LEFT_RIGHT).show()#左右镜像反转
+img1.transpose(Image.ROTATE_90).show()#90°旋转
+img1.transpose(Image.TRANSPOSE).show()#转置
+r1,g1,b1=img2.split()#按照RGB通道分离图像
+r2,g2,b2=img3.split()
+Image.merge('RGB',[r1,g2,b2]).show()#按照RGB通道合并图像
