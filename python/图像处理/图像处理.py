@@ -1,4 +1,4 @@
-from PIL import Image#导入Image模块
+from PIL import Image,ImageFilter#导入Image模块
 img1=Image.open('img1.jpg')#打开图片
 img1.show()#显示图片
 print('图片的格式',img1.format,'\n大小',img1.size,'\n宽度',img1.width,'高度',img1.height,'\n获取(100,100)处RGB值',img1.getpixel((100,100)))#查看图片信息
@@ -24,3 +24,16 @@ img1.transpose(Image.TRANSPOSE).show()#转置
 r1,g1,b1=img2.split()#按照RGB通道分离图像
 r2,g2,b2=img3.split()
 Image.merge('RGB',[r1,g2,b2]).show()#按照RGB通道合并图像
+#=======================================================================================
+img_output=Image.new('RGB',(2*img3.width,img3.height))#创建一个2倍img3宽的画布
+img_output.paste(img3,(0,0))#将img3粘贴在左上角
+img_filter1=img3.filter(ImageFilter.GaussianBlur)#高斯滤镜
+img_filter2=img3.filter(ImageFilter.CONTOUR)#轮廓滤镜
+img_filter3=img3.filter(ImageFilter.EMBOSS)#浮雕滤镜
+filters=[]#创建列表
+filters.append(img_filter1)
+filters.append(img_filter2)
+filters.append(img_filter3)
+for img_filter in filters:#循环比对三种滤镜
+    img_output.paste(img_filter,(img3.width,0))#将带滤镜的图像放在右侧方便对比
+    img_output.show()
