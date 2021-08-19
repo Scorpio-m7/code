@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+</head>
+<body>
+	<form action="receive_data.php?username=1" method="post">
+        <input type="text" name="username" value=""/><!--表单元素的“name”属性的值作为数组的下标，而value属性对应的值就是数组的元素值-->
+        <input type="password" value=""/>
+        <input type="checkbox" name="hobby[]" value="basketball"/>basketball<!--复选框-->
+        <input type="checkbox" name="hobby[]" value="football"/>football<!--在php中会将同名的但是带有[]组合成数组-->
+        <input type="checkbox" name="hobby[]" value="game"/>game
+        <input type="submit" name="submit" value="submit"/><!--submit也算作提交的数组-->
+	</form>
+	</div>
+</body>
+</html>
