@@ -1,4 +1,4 @@
-from PIL import Image,ImageFilter#导入Image模块
+from PIL import Image,ImageFilter,ImageChops,ImageEnhance#导入Image模块
 img1=Image.open('img1.jpg')#打开图片
 img1.show()#显示图片
 print('图片的格式',img1.format,'\n大小',img1.size,'\n宽度',img1.width,'高度',img1.height,'\n获取(100,100)处RGB值',img1.getpixel((100,100)))#查看图片信息
@@ -37,3 +37,16 @@ filters.append(img_filter3)
 for img_filter in filters:#循环比对三种滤镜
     img_output.paste(img_filter,(img3.width,0))#将带滤镜的图像放在右侧方便对比
     img_output.show()
+#=======================================================================================
+ImageChops.add(img1,img3).show()#对两张图片进行算数加法
+ImageChops.darker(img1,img3).show()#取两张图片中对应像素的较小值
+ImageChops.multiply(img1,img3).show()#两张图片互相叠加
+ImageChops.screen(img1,img3).show()#投影
+ImageChops.invert(img1).show()#反色函数,底片效果
+ImageChops.difference(img1,img3).show()#比较差异
+#=======================================================================================
+img_output=Image.new('RGB',(3*img3.width,img3.height))#创建一个3倍img3宽的画布
+img_output.paste(ImageEnhance.Color(img3).enhance(2),(0,0))#获取色彩调整器,色彩增强2倍,将图片粘贴在左上角
+img_output.paste(ImageEnhance.Brightness(img3).enhance(0.3),(img3.width,0))#获取亮度调整器,亮度减弱0.3倍,将图片放在右侧方便对比
+img_output.paste(img3.point(lambda i:i*1.5),(2*img3.width,0))#对像素点进行1.5倍运算
+img_output.show()
